@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>????</title>
-  <meta name="description" content="???????????????????????????? GitHub Pages?" />
-  <meta property="og:title" content="???? - CS Baoyan Chat Daily" />
-  <meta property="og:description" content="?? AI ????????? CS ??????" />
+  <title>绿群日报</title>
+  <meta name="description" content="按日期浏览保研信息日报，默认显示最新一期，支持静态部署到 GitHub Pages。" />
+  <meta property="og:title" content="绿群日报 - CS Baoyan Chat Daily" />
+  <meta property="og:description" content="每日 AI 总结绿群信息，打破 CS 保研信息差。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kuangpenghao.github.io/ZhaoGeXueShang-GuoNei/" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>??</text></svg>" />
-  <link rel="stylesheet" href="./styles.css?v=20260615b" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>" />
+  <link rel="stylesheet" href="./styles.css?v=20260615c" />
   <script>
     const savedTheme = localStorage.getItem('theme') || 'system';
     if (savedTheme === 'dark' || (savedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -22,18 +22,18 @@
   </script>
   <script defer src="./vendor/marked.min.js"></script>
   <script defer src="./vendor/purify.min.js"></script>
-  <script defer src="./app.js?v=20260615b"></script>
-  <script defer src="./search-qa.js?v=20260615b"></script>
+  <script defer src="./app.js?v=20260615c"></script>
+  <script defer src="./search-qa.js?v=20260615c"></script>
 </head>
 
 <body>
   <div class="site-shell">
     <header class="hero">
-      <a class="hero-copy hero-home-link" id="home-link" href="./" aria-label="????">
+      <a class="hero-copy hero-home-link" id="home-link" href="./" aria-label="回到主页">
         <p class="eyebrow">CS Baoyan Chat Daily</p>
-        <h1>????</h1>
+        <h1>绿群日报</h1>
         <p class="hero-summary">
-          ?????????????????
+          绿群保研信息提炼：帮你每日快速跟进
         </p>
       </a>
       <div class="hero-status">
@@ -48,13 +48,13 @@
         </a>
         <a href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei/issues" target="_blank" rel="noopener noreferrer"
           class="status-chip" aria-label="Feedback">
-          ??
+          反馈
         </a>
-        <span class="status-chip" id="report-count">0 ???</span>
-        <button class="status-chip" id="search-btn" aria-label="????" title="??">
+        <span class="status-chip" id="report-count">0 篇日报</span>
+        <button class="status-chip" id="search-btn" aria-label="搜索日报" title="搜索">
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </button>
-        <button class="status-chip" id="theme-toggle" aria-label="??????" title="????">
+        <button class="status-chip" id="theme-toggle" aria-label="切换阅读模式" title="切换模式">
           <svg class="icon-sun" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="icon-moon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
           <svg class="icon-system" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
@@ -68,45 +68,45 @@
           <section class="pause-banner" aria-labelledby="pause-banner-title">
             <div class="pause-banner-copy">
               <p class="reader-label">Archive</p>
-              <h2 id="pause-banner-title">???????</h2>
-              <p>?????????????????????????????</p>
+              <h2 id="pause-banner-title">日报归档与检索</h2>
+              <p>这里持续同步每日产物，可按日期浏览，也可全文搜索历史内容。</p>
             </div>
             <div class="pause-banner-meta">
-              <a class="secondary-action" href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei" target="_blank" rel="noopener noreferrer">????</a>
+              <a class="secondary-action" href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei" target="_blank" rel="noopener noreferrer">查看仓库</a>
             </div>
           </section>
           <div class="home-hero">
             <div class="home-copy">
-              <h2>??????????????????????</h2>
+              <h2>把绿群中有用的保研信息，整理成每日可读的一页</h2>
               <p>
-                ?????????????????????????????????????????????????????????
+                绿群日报会从群聊中提取院校项目、夏令营、导师信息、经验观点和待核实风险，帮助没有时间翻完整聊天记录的同学快速跟进。
               </p>
             </div>
-            <div class="home-actions" role="group" aria-label="????">
-              <button class="primary-action" id="read-latest-btn" type="button">??????</button>
-              <button class="secondary-action" id="home-search-btn" type="button">??????</button>
+            <div class="home-actions" role="group" aria-label="快捷入口">
+              <button class="primary-action" id="read-latest-btn" type="button">阅读最新日报</button>
+              <button class="secondary-action" id="home-search-btn" type="button">搜索全部日报</button>
             </div>
           </div>
 
-          <section class="home-grid" aria-label="????">
+          <section class="home-grid" aria-label="站点概览">
             <article class="home-panel latest-panel">
               <p class="home-panel-kicker">Latest</p>
-              <h3>????</h3>
-              <p class="home-panel-value" id="latest-report-date">????...</p>
-              <p class="home-panel-note">??????????????????????????????????????</p>
+              <h3>最新日报</h3>
+              <p class="home-panel-value" id="latest-report-date">正在加载...</p>
+              <p class="home-panel-note">查看最新一期群聊摘要，快速了解近期保研项目、导师信息、申请经验和待核实风险。</p>
             </article>
             <article class="home-panel">
               <p class="home-panel-kicker">Archive</p>
-              <h3>????</h3>
-              <p class="home-panel-value" id="home-report-count">0 ?</p>
-              <p class="home-panel-note">?????????????????????????????</p>
+              <h3>日报归档</h3>
+              <p class="home-panel-value" id="home-report-count">0 篇</p>
+              <p class="home-panel-note">可按日期浏览，也可以用搜索定位具体院校、导师或项目关键词。</p>
             </article>
             <article class="home-panel">
               <p class="home-panel-kicker">Verify</p>
-              <h3>????</h3>
-              <p class="home-panel-value">AI ??</p>
+              <h3>谨慎核实</h3>
+              <p class="home-panel-value">AI 整理</p>
               <p class="home-panel-note">
-                ??? AI ?????????????????????????????????????????
+                内容由 AI 从群聊中整理归纳，仅供参考。涉及时效性、主观经验和未核实信息时，请以官方通知为准。
               </p>
             </article>
           </section>
@@ -114,88 +114,88 @@
           <section class="recent-reports" aria-labelledby="recent-reports-title">
             <div class="section-head">
               <p class="reader-label">Recent Reports</p>
-              <h2 id="recent-reports-title">????</h2>
+              <h2 id="recent-reports-title">最近日报</h2>
             </div>
             <div class="recent-reports-list" id="recent-reports-list">
-              <div class="date-switcher-empty">????????...</div>
+              <div class="date-switcher-empty">正在加载最近日报...</div>
             </div>
           </section>
 
           <section class="contribute-section" aria-labelledby="contribute-title">
             <div class="contribute-copy">
               <p class="reader-label">Contribute</p>
-              <h2 id="contribute-title">????</h2>
+              <h2 id="contribute-title">参与改进</h2>
               <p>
-                ??????????????????????????????????????????????? GitHub ?????
+                绿群日报还在持续迭代。如果你发现内容有误、隐私风险、分类不准，或者希望增加新的浏览方式，欢迎在 GitHub 留下反馈。
               </p>
               <p>
-                ????????????????????????? Star?????????????
+                如果它刚好帮你省下一点翻群聊的时间，也可以顺手点亮 Star，让更多同学发现这份日报。
               </p>
             </div>
-            <nav class="contribute-actions" aria-label="???????">
-              <a class="secondary-action" href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei/issues/new?title=%E5%86%85%E5%AE%B9%E9%97%AE%E9%A2%98%EF%BC%9A" target="_blank" rel="noopener noreferrer">????</a>
-              <a class="secondary-action" href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei/issues/new?title=%E6%94%B9%E8%BF%9B%E5%BB%BA%E8%AE%AE%EF%BC%9A" target="_blank" rel="noopener noreferrer">????</a>
-              <a class="primary-action" href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei" target="_blank" rel="noopener noreferrer">????</a>
+            <nav class="contribute-actions" aria-label="反馈与项目链接">
+              <a class="secondary-action" href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei/issues/new?title=%E5%86%85%E5%AE%B9%E9%97%AE%E9%A2%98%EF%BC%9A" target="_blank" rel="noopener noreferrer">反馈问题</a>
+              <a class="secondary-action" href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei/issues/new?title=%E6%94%B9%E8%BF%9B%E5%BB%BA%E8%AE%AE%EF%BC%9A" target="_blank" rel="noopener noreferrer">提出建议</a>
+              <a class="primary-action" href="https://github.com/kuangpenghao/ZhaoGeXueShang-GuoNei" target="_blank" rel="noopener noreferrer">查看仓库</a>
             </nav>
           </section>
         </section>
 
         <section class="reader-view" id="reader-view" hidden>
-          <section class="reader-intro">
-            <section class="date-switcher" id="date-switcher" aria-label="????">
-              <div class="date-switcher-bar">
-                <button class="date-nav-btn" id="prev-date-btn" type="button" aria-label="?????" title="?????">
-                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                  </svg>
-                </button>
-                <button class="date-current-btn" id="current-date-btn" type="button" aria-controls="date-switcher-popover"
-                  aria-expanded="false" aria-label="?????????????">
-                  <span class="date-current-value" id="date-switcher-current">????...</span>
-                  <svg class="date-current-caret" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-                <button class="date-nav-btn" id="next-date-btn" type="button" aria-label="?????" title="?????">
-                  <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </button>
-              </div>
-              <div class="date-switcher-popover" id="date-switcher-popover" hidden>
-                <div class="date-switcher-popover-head">
-                  <p class="date-switcher-kicker">Archive</p>
-                  <p class="date-switcher-title">??????</p>
-                </div>
-                <div class="date-switcher-list" id="date-switcher-list">
-                  <div class="date-switcher-empty">????????...</div>
-                </div>
-              </div>
-            </section>
-          </section>
-
-          <section class="report-card" aria-live="polite">
-            <div class="loading-state" id="loading-state">
-              <div class="loading-line wide"></div>
-              <div class="loading-line"></div>
-              <div class="loading-line narrow"></div>
+        <section class="reader-intro">
+          <section class="date-switcher" id="date-switcher" aria-label="日期切换">
+            <div class="date-switcher-bar">
+              <button class="date-nav-btn" id="prev-date-btn" type="button" aria-label="上一条日报" title="上一条日报">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="date-current-btn" id="current-date-btn" type="button" aria-controls="date-switcher-popover"
+                aria-expanded="false" aria-label="当前日报日期，打开日期列表">
+                <span class="date-current-value" id="date-switcher-current">正在加载...</span>
+                <svg class="date-current-caret" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <button class="date-nav-btn" id="next-date-btn" type="button" aria-label="下一条日报" title="下一条日报">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
             </div>
-            <article class="report-content" id="report-content"></article>
+            <div class="date-switcher-popover" id="date-switcher-popover" hidden>
+              <div class="date-switcher-popover-head">
+                <p class="date-switcher-kicker">Archive</p>
+                <p class="date-switcher-title">选择日报日期</p>
+              </div>
+              <div class="date-switcher-list" id="date-switcher-list">
+                <div class="date-switcher-empty">正在加载日期列表...</div>
+              </div>
+            </div>
           </section>
+        </section>
+
+        <section class="report-card" aria-live="polite">
+          <div class="loading-state" id="loading-state">
+            <div class="loading-line wide"></div>
+            <div class="loading-line"></div>
+            <div class="loading-line narrow"></div>
+          </div>
+          <article class="report-content" id="report-content"></article>
+        </section>
         </section>
       </main>
     </div>
 
     <footer class="site-footer">
       <div class="footer-links">
-        <span>????? <a href="https://github.com/CS-BAOYAN" target="_blank" rel="noopener noreferrer">CS-BAOYAN
-            ??</a>??????????????</span>
+        <span>绿群日报是 <a href="https://github.com/CS-BAOYAN" target="_blank" rel="noopener noreferrer">CS-BAOYAN
+            社区</a>相关群聊信息的非官方整理项目</span>
       </div>
       <p class="disclaimer-note">
-        ??? AI ??????????????????????????????????????????
+        内容由 AI 辅助归纳，仅供参考；涉及时效性、主观经验和未核实信息时，请以官方通知和公开资料为准。
       </p>
     </footer>
   </div>
@@ -205,18 +205,18 @@
     <div class="search-container qa-container">
       <div class="search-header">
         <svg class="search-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="text" id="search-input" class="search-input" placeholder="?????????..." autocomplete="off">
-        <button class="close-search-btn" id="close-search-btn" aria-label="????">
+        <input type="text" id="search-input" class="search-input" placeholder="&#36755;&#20837;&#20851;&#38190;&#35789;&#25628;&#32034;&#26085;&#25253;..." autocomplete="off">
+        <button class="close-search-btn" id="close-search-btn" aria-label="&#20851;&#38381;&#25628;&#32034;">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
-      <div class="search-mode-tabs" role="tablist" aria-label="??????">
-        <button class="search-mode-tab active" id="keyword-tab" type="button" data-mode="keyword" role="tab" aria-selected="true">????</button>
-        <button class="search-mode-tab" id="qa-tab" type="button" data-mode="qa" role="tab" aria-selected="false">????</button>
+      <div class="search-mode-tabs" role="tablist" aria-label="&#25628;&#32034;&#27169;&#24335;&#20999;&#25442;">
+        <button class="search-mode-tab active" id="keyword-tab" type="button" data-mode="keyword" role="tab" aria-selected="true">&#20840;&#25991;&#25628;&#32034;</button>
+        <button class="search-mode-tab" id="qa-tab" type="button" data-mode="qa" role="tab" aria-selected="false">&#26234;&#33021;&#38382;&#31572;</button>
       </div>
       <div class="search-pane active" id="keyword-pane" data-pane="keyword">
         <div class="search-results" id="search-results">
-          <div class="search-placeholder">?????????...</div>
+          <div class="search-placeholder">&#36755;&#20837;&#20851;&#38190;&#35789;&#24320;&#22987;&#25628;&#32034;...</div>
         </div>
       </div>
       <div class="search-pane qa-pane" id="qa-pane" data-pane="qa" hidden>
@@ -225,15 +225,15 @@
             <div class="qa-config-head">
               <div>
                 <p class="qa-kicker">Session</p>
-                <h3>????</h3>
+                <h3>&#29992;&#25143;&#37197;&#32622;</h3>
               </div>
-              <button class="qa-secondary-btn" id="qa-fill-demo-btn" type="button">??????</button>
+              <button class="qa-secondary-btn" id="qa-fill-demo-btn" type="button">&#22635;&#20837;&#27979;&#35797;&#37197;&#32622;</button>
             </div>
-            <p class="qa-config-note" id="qa-transport-note">????????????????? CORS ???????????????</p>
+            <p class="qa-config-note" id="qa-transport-note">&#20248;&#20808;&#23581;&#35797;&#27983;&#35272;&#22120;&#30452;&#36830;&#65307;&#22914;&#26524;&#26381;&#21153;&#21830;&#25318;&#25130; CORS &#39044;&#26816;&#65292;&#21487;&#37197;&#32622;&#31449;&#28857;&#20013;&#32487;&#33258;&#21160;&#20828;&#24213;&#12290;</p>
             <div class="qa-config-grid">
               <label class="qa-field">
                 <span>GitHub ID</span>
-                <input id="qa-github-id" type="text" placeholder="? kuangpenghao" autocomplete="off">
+                <input id="qa-github-id" type="text" placeholder="&#22914; kuangpenghao" autocomplete="off">
               </label>
               <label class="qa-field qa-field-wide">
                 <span>Base URL</span>
@@ -251,20 +251,20 @@
           </section>
           <section class="qa-query-card">
             <label class="qa-field qa-field-wide">
-              <span>??</span>
-              <textarea id="qa-question" rows="4" placeholder="?????AI?????com???com?"></textarea>
+              <span>&#38382;&#39064;</span>
+              <textarea id="qa-question" rows="4" placeholder="&#20363;&#22914;&#65306;&#19978;&#20132;AI&#38498;&#30452;&#21338;&#26159;&#24378;com&#36824;&#26159;&#24369;com&#65311;"></textarea>
             </label>
             <div class="qa-actions-row">
-              <button class="primary-action qa-primary-btn" id="qa-run-btn" type="button">????</button>
-              <button class="secondary-action qa-secondary-btn" id="qa-stop-btn" type="button" disabled>??</button>
-              <span class="qa-status-text" id="qa-status">????</span>
+              <button class="primary-action qa-primary-btn" id="qa-run-btn" type="button">&#24320;&#22987;&#38382;&#31572;</button>
+              <button class="secondary-action qa-secondary-btn" id="qa-stop-btn" type="button" disabled>&#20572;&#27490;</button>
+              <span class="qa-status-text" id="qa-status">&#31561;&#24453;&#25552;&#38382;</span>
             </div>
           </section>
           <section class="qa-answer-card" id="qa-answer-card" hidden>
             <div class="qa-answer-head">
               <div>
                 <p class="qa-kicker">Answer</p>
-                <h3>??</h3>
+                <h3>&#35299;&#31572;</h3>
               </div>
               <span class="qa-metric" id="qa-latency">--</span>
             </div>
@@ -274,9 +274,9 @@
             <div class="qa-answer-head">
               <div>
                 <p class="qa-kicker">Evidence</p>
-                <h3>????</h3>
+                <h3>&#21442;&#32771;&#28040;&#24687;</h3>
               </div>
-              <span class="qa-metric" id="qa-reference-count">0 ?</span>
+              <span class="qa-metric" id="qa-reference-count">0 &#26465;</span>
             </div>
             <div class="qa-reference-list" id="qa-reference-list"></div>
           </section>
