@@ -500,6 +500,10 @@ function openSearch() {
   elements.searchModal.setAttribute('aria-hidden', 'false');
   elements.searchInput.focus();
   prefetchAllReports();
+  document.dispatchEvent(new CustomEvent('search-modal-opened'));
+  if (typeof window.CSBaoyanQaFocusActiveInput === 'function') {
+    window.CSBaoyanQaFocusActiveInput();
+  }
 }
 
 function closeSearch() {
@@ -625,3 +629,13 @@ initDateSwitcher();
 initSearch();
 initHome();
 loadManifest();
+
+window.CSBaoyanSearchModal = {
+  openSearch,
+  closeSearch,
+};
+
+window.CSBaoyanSearchModal = {
+  openSearch,
+  closeSearch,
+};
