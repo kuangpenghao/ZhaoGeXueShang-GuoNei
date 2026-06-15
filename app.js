@@ -510,6 +510,7 @@ function closeSearch() {
   elements.searchModal.hidden = true;
   elements.searchModal.setAttribute('aria-hidden', 'true');
   elements.searchInput.value = '';
+  document.dispatchEvent(new CustomEvent('search-modal-closed'));
   elements.searchResults.innerHTML = '<div class="search-placeholder">输入关键词开始搜索...</div>';
 }
 
@@ -629,11 +630,6 @@ initDateSwitcher();
 initSearch();
 initHome();
 loadManifest();
-
-window.CSBaoyanSearchModal = {
-  openSearch,
-  closeSearch,
-};
 
 window.CSBaoyanSearchModal = {
   openSearch,
