@@ -1,0 +1,11 @@
+{
+  "date": "2026-06-15",
+  "export_file": "D:\\_SHTU_\\2526_spring\\Application\\绿群日报\\repo\\..\\chat_exports\\__________________2026-06-15T22-31-00.json",
+  "model": "gpt-5.4",
+  "base_url": "https://codexapis.com/v1",
+  "reasoning_effort": "high",
+  "prompt_profile": "comprehensive",
+  "chunk_count": 13,
+  "message_count": 6875,
+  "generated_at": "2026-06-16T19:21:23"
+}
